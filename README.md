@@ -1,5 +1,7 @@
 # ⚽ Football Legends Portal
 
+Live link ~ https://footballplayers-rho.vercel.app/
+
 A premium, visually stunning Vue 3 single-page web application featuring football player profiles, interactive dashboards, favoriting systems, custom forms, a dependency injection playground, and an administrative CRUD interface powered by a mock JSON API.
 
 ---
