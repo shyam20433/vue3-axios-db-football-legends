@@ -20,24 +20,25 @@ defineProps({
 
 <style scoped>
 h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
+  font-weight: 800;
+  font-size: 2.8rem;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--color-primary, #6366f1) 30%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 h3 {
   font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
+  color: var(--text-secondary, #94a3b8);
+  font-weight: 400;
   text-align: center;
 }
 
 @media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
+  h1, h3 {
     text-align: left;
   }
 }

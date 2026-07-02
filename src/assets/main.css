@@ -1,35 +1,64 @@
-@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-primary: 'Outfit', sans-serif;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #1a153b, #0d111d, #06080e);
+  --color-primary: #6366f1;
+  --color-primary-hover: #818cf8;
+  --color-accent: #f59e0b;
+  --color-accent-hover: #fbbf24;
+  --glass-bg: rgba(20, 26, 46, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-glow: rgba(99, 102, 241, 0.15);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --shadow-premium: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+}
+
+body {
+  font-family: var(--font-primary) !important;
+  background: var(--bg-gradient) !important;
+  color: var(--text-primary) !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: background-color 0.5s, color 0.5s;
+}
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-a,
-.green {
+/* Global scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d111d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a354f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+a {
+  color: var(--color-primary);
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  transition: color 0.3s ease;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+a:hover {
+  color: var(--color-primary-hover);
 }

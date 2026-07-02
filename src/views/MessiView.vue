@@ -58,3 +58,22 @@ const store = usePlayerStore()
 
   <p v-else>🤍 Not Favorite</p>
 </template>
+
+<style scoped>
+p {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary, #94a3b8);
+  margin-top: 15px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+</style>

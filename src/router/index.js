@@ -8,6 +8,12 @@ import RonaldoView from '../views/RonaldoView.vue'
 import ChhetriView from '../views/ChhetriView.vue'
 import ProvideInjectView from '@/views/ProvideInjectView.vue'
 import FavouriteView from '@/views/FavouriteView.vue'
+import form from '@/views/formView.vue'
+
+
+//api
+import FootballApiView from "@/views/FootballApiView.vue";
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,35 +45,29 @@ const router = createRouter({
     {
       path: '/favorites',
       component: FavouriteView
+    },
+    {
+      path: "/football-api",
+      component: FootballApiView
+    },
+    {
+      path:"/form",
+      component:form
     }
+
   ]
 })
 router.beforeEach((to) => {
 
-    const store = usePlayerStore()
+  const store = usePlayerStore()
 
-    if (to.path === "/favorites" && store.favorites.length === 0) {
+  if (to.path === "/favorites" && store.favorites.length === 0) {
 
-        alert("Please add a favorite player first!")
+    alert("Please add a favorite player first!")
 
-        return {path:"/"}
-    }
+    return { path: "/" }
+  }
 
 })
-
-router.beforeEach((to) => {
-
-
-
-    if (to.path === "/neymar" ) {
-      const username=window.prompt(`enter the username`)
-      if (username === "shyam"){
-
-        return true }
-    else{
-        return {path:"/"}
-    }
-
-}})
 
 export default router
